@@ -1,4 +1,4 @@
-package dev.conchy.escape_room.config;
+package dev.conchy.escape_room.security;
 
 
 import java.io.IOException;
