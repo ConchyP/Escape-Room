@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 
 import org.junit.jupiter.api.Test;
 
+import dev.conchy.escape_room.role.exceptions.RoleNotFoundException;
+
 public class RoleNotFoundExceptionTest {
  @Test
     void testRoleNotFoundExceptionMessage() {

@@ -1,4 +1,4 @@
-package dev.conchy.escape_room.exceptions;
+package dev.conchy.escape_room.role.exceptions;
 
 public class RoleException extends RuntimeException {
     

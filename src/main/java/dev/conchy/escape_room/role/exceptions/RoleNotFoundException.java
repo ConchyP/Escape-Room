@@ -1,7 +1,7 @@
-package dev.conchy.escape_room.exceptions;
+package dev.conchy.escape_room.role.exceptions;
 
 public class RoleNotFoundException extends RoleException {
-    
+
     public RoleNotFoundException(String message) {
         super(message);
     }

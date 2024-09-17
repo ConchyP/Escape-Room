@@ -1,9 +1,10 @@
-package dev.conchy.escape_room.models;
+package dev.conchy.escape_room.role;
 
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import dev.conchy.escape_room.user.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,7 +22,7 @@ public class Role {
 
     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
-    @Column(name = "role_id")
+    @Column(name = "id_role")
     private Long id;
     private String name;
 

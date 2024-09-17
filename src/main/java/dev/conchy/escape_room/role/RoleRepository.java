@@ -1,8 +1,6 @@
-package dev.conchy.escape_room.repositories;
+package dev.conchy.escape_room.role;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import dev.conchy.escape_room.models.Role;
 
 public interface RoleRepository extends JpaRepository<Role, Long> {
 

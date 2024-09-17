@@ -6,6 +6,9 @@ import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
+import dev.conchy.escape_room.role.Role;
+import dev.conchy.escape_room.user.User;
+
 public class RoleTest {
 
     @Test

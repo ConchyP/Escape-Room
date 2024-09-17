@@ -1,11 +1,13 @@
 package dev.conchy.escape_room.services;
 
-import dev.conchy.escape_room.exceptions.RoleException;
-import dev.conchy.escape_room.repositories.RoleRepository;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+
+import dev.conchy.escape_room.role.RoleRepository;
+import dev.conchy.escape_room.role.RoleService;
+import dev.conchy.escape_room.role.exceptions.RoleException;
 
 import java.util.Optional;
 
