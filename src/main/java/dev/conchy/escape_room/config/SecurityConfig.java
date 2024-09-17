@@ -11,6 +11,8 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
+import dev.conchy.escape_room.users.JpaUserDetailsService;
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
@@ -49,7 +51,7 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.POST, endpoint + "/register").permitAll()
                 .requestMatchers(HttpMethod.GET, endpoint + "/event/**").permitAll()
                 .anyRequest().authenticated())
-                .userDetailsService(jpaUserDetailsService)
+                .userDetailsService(JpaUserDetailsService)
                 .httpBasic(basic -> basic.authenticationEntryPoint(myBasicAuthenticationEntryPoint))
                 .sessionManagement(session -> session
                 .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED));
