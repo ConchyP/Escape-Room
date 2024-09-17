@@ -1,10 +1,9 @@
-package dev.conchy.escape_room.user;
+package dev.conchy.escape_room.users;
 
 import java.util.Set;
 
 import dev.conchy.escape_room.profile.Profile;
-import dev.conchy.escape_room.role.Role;
-
+import dev.conchy.escape_room.roles.Role;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

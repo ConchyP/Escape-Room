@@ -1,8 +1,8 @@
-package dev.conchy.escape_room.role;
+package dev.conchy.escape_room.roles;
 
 import org.springframework.stereotype.Service;
 
-import dev.conchy.escape_room.role.exceptions.RoleException;
+import dev.conchy.escape_room.roles.exceptions.RoleException;
 
 @Service
 public class RoleService {

@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 
 import org.junit.jupiter.api.Test;
 
-import dev.conchy.escape_room.role.exceptions.RoleException;
+import dev.conchy.escape_room.roles.exceptions.RoleException;
 
 public class RoleExceptionTest {
    

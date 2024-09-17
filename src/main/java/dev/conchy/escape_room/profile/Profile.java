@@ -1,6 +1,6 @@
 package dev.conchy.escape_room.profile;
 
-import dev.conchy.escape_room.user.User;
+import dev.conchy.escape_room.users.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,10 +1,10 @@
-package dev.conchy.escape_room.role;
+package dev.conchy.escape_room.roles;
 
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import dev.conchy.escape_room.user.User;
+import dev.conchy.escape_room.users.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

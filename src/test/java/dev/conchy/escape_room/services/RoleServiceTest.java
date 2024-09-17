@@ -5,9 +5,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import dev.conchy.escape_room.role.RoleRepository;
-import dev.conchy.escape_room.role.RoleService;
-import dev.conchy.escape_room.role.exceptions.RoleException;
+import dev.conchy.escape_room.roles.RoleRepository;
+import dev.conchy.escape_room.roles.RoleService;
+import dev.conchy.escape_room.roles.exceptions.RoleException;
 
 import java.util.Optional;
 
