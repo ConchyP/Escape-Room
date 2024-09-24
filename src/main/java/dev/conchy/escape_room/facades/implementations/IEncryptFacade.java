@@ -1,4 +1,4 @@
-package dev.conchy.escape_room.security.implementations;
+package dev.conchy.escape_room.facades.implementations;
 
 public interface IEncryptFacade {
 

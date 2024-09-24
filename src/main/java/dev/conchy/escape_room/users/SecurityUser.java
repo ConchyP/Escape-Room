@@ -1,17 +1,19 @@
 package dev.conchy.escape_room.users;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
-
 import dev.conchy.escape_room.roles.Role;
+
+
+import java.util.ArrayList;
+import java.util.Collection;
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+
 public class SecurityUser implements UserDetails {
 
-    private final User user;
+    User user;
 
     public SecurityUser(User user) {
         this.user = user;
@@ -29,10 +31,12 @@ public class SecurityUser implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        Set<GrantedAuthority> authorities = new HashSet<>();
+        Collection<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
 
         for (Role role : user.getRoles()) {
-            authorities.add(new SimpleGrantedAuthority(role.getName()));
+            System.out.println("User role : " + role.getName());
+            SimpleGrantedAuthority authority = new SimpleGrantedAuthority(role.getName());
+            authorities.add(authority);
         }
 
         return authorities;
@@ -40,7 +44,7 @@ public class SecurityUser implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return true; 
+        return true;
     }
 
     @Override
@@ -57,4 +61,5 @@ public class SecurityUser implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
 }

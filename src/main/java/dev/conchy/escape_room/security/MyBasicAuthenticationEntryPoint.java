@@ -2,6 +2,7 @@ package dev.conchy.escape_room.security;
 
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint;
@@ -17,15 +18,15 @@ public class MyBasicAuthenticationEntryPoint extends BasicAuthenticationEntryPoi
     public void commence(HttpServletRequest request, HttpServletResponse response,
             AuthenticationException authException) throws IOException {
         response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-
-        response.setHeader("WWW-Authenticate", "Basic realm=\"" + getRealmName() + "\"");
-
-        response.getWriter().println("HTTP Status 401 - " + authException.getMessage());
+        // response.setHeader("WWW-Authenticate", "Basic realm=" + getRealmName());
+        PrintWriter writer = response.getWriter();
+        writer.println("HTTP Status 401 - " + authException.getMessage());
     }
 
     @Override
     public void afterPropertiesSet() {
-        setRealmName("escape_room"); //¿?¿?
+        setRealmName("escape_room");
         super.afterPropertiesSet();
     }
+
 }

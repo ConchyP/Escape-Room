@@ -1,8 +1,8 @@
-package dev.conchy.escape_room.security.facades.encryptations;
+package dev.conchy.escape_room.encryptations;
 
 import java.util.Base64;
 
-import dev.conchy.escape_room.security.implementations.IEncoder;
+import dev.conchy.escape_room.facades.implementations.IEncoder;
 
 public class Base64Encoder implements IEncoder {
 

@@ -1,7 +1,7 @@
-package dev.conchy.escape_room.security.facades;
+package dev.conchy.escape_room.facades;
 
-import dev.conchy.escape_room.security.facades.encryptations.Base64Encoder;
-import org.factoriaf5.pizzeriapaca.security.implementations.IEncryptFacade;
+import dev.conchy.escape_room.encryptations.Base64Encoder;
+import dev.conchy.escape_room.facades.implementations.IEncryptFacade;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 

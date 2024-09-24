@@ -1,8 +1,8 @@
-package dev.conchy.escape_room.security.facades.encryptations;
+package dev.conchy.escape_room.encryptations;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import dev.conchy.escape_room.security.implementations.IEncoder;
+import dev.conchy.escape_room.facades.implementations.IEncoder;
 
 public class BcryptEncoder implements IEncoder {
 
