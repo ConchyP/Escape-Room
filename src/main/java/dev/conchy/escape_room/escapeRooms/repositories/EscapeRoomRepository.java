@@ -1,9 +1,5 @@
-package dev.conchy.escape_room.escaperooms.repositories;
+package dev.conchy.escape_room.escaperooms.services;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface  extends JpaRepository<EscapeRoom, Long> {
+public interface EscapeRoomRepository {
 
 }
