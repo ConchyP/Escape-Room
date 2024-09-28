@@ -41,5 +41,4 @@ public class EscapeRoomService {
         }
         repository.deleteById(id);
     }
-
 }

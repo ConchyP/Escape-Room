@@ -51,6 +51,7 @@ public class SecurityConfig {
                                                 .requestMatchers(HttpMethod.POST, endpoint + "/register").permitAll()
                                                 .requestMatchers(HttpMethod.GET, endpoint + "/login").hasAnyRole("USER", "ADMIN")
                                                 .requestMatchers(HttpMethod.GET, endpoint + "/login").permitAll()
+                                                .requestMatchers(HttpMethod.GET, endpoint + "/escapeRooms/all").permitAll()
                                                 .requestMatchers(HttpMethod.GET, endpoint + "/**").permitAll()
                                                 .anyRequest().authenticated())
                                 .userDetailsService(jpaUserDetailsService)
