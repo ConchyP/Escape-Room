@@ -53,6 +53,8 @@ public class SecurityConfig {
                                                 .requestMatchers(HttpMethod.GET, endpoint + "/login").permitAll()
                                                 .requestMatchers(HttpMethod.GET, endpoint + "/escapeRooms/all").permitAll()
                                                 .requestMatchers(HttpMethod.GET, endpoint + "/**").permitAll()
+                                                .requestMatchers(HttpMethod.DELETE, endpoint + "/escapeRooms/**").permitAll()
+
                                                 .anyRequest().authenticated())
                                 .userDetailsService(jpaUserDetailsService)
                                 .httpBasic(basic -> basic.authenticationEntryPoint(myBasicAuthenticationEntryPoint))
