@@ -41,4 +41,8 @@ public class EscapeRoomService {
         }
         repository.deleteById(id);
     }
+
+    public List<EscapeRoom> findEscapeRoomsByDificultad(String dificultad) {
+        return EscapeRoomRepository.findByDificultad(dificultad);
+    }
 }
