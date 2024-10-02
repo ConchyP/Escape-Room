@@ -42,7 +42,11 @@ public class EscapeRoomService {
         repository.deleteById(id);
     }
 
-    public List<EscapeRoom> findEscapeRoomsByDificultad(String dificultad) {
-        return EscapeRoomRepository.findByDificultad(dificultad);
+    public EscapeRoomService(EscapeRoomRepository escapeRoomRepository) {
+        this.repository = escapeRoomRepository;
+    }
+
+    public List<EscapeRoom> findByDificultad(String dificultad) {
+        return repository.findByDificultad(dificultad);
     }
 }

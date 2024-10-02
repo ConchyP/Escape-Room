@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import dev.conchy.escape_room.escaperooms.models.EscapeRoom;
@@ -56,4 +57,11 @@ public class EscapeRoomController {
         escapeRoomService.deleteEscapeRoomById(id);
         return ResponseEntity.noContent().build(); 
     }
-}
+
+
+        @GetMapping(path = "/search")
+        public List<EscapeRoom> searchByDificultad(@RequestParam String dificultad) {
+            return escapeRoomService.findByDificultad(dificultad);
+        }
+    }
+

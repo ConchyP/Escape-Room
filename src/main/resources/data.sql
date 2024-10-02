@@ -41,3 +41,4 @@ VALUES
 INSERT INTO escape_rooms (nombre, descripcion, dificultad, image) 
 VALUES 
 ('La Fortaleza Prohibida', 'Escapa de una fortaleza medieval repleta de trampas y enemigos.', 'Alta', 'forbidden_fortress.jpg');
+

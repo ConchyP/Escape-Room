@@ -11,8 +11,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface EscapeRoomRepository extends JpaRepository<EscapeRoom, Long>{
 
-    static List<EscapeRoom> findByDificultad(String dificultad) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'findByDificultad'");
-    }
+    List<EscapeRoom> findByDificultad(String dificultad);
 }
