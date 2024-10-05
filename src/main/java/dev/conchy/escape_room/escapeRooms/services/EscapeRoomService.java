@@ -47,6 +47,9 @@ public class EscapeRoomService {
     }
 
     public List<EscapeRoom> findByDificultad(String dificultad) {
-        return repository.findByDificultad(dificultad);
+        if (dificultad == null || dificultad.isEmpty()) {
+            return repository.findAll(); // Si no hay dificultad, devuelve todas
+        }
+        return repository.findByDificultad(dificultad); // Filtra por dificultad
     }
 }

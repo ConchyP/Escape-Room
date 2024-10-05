@@ -49,11 +49,14 @@ public class SecurityConfig {
                                 .authorizeHttpRequests(auth -> auth
                                                 .requestMatchers(AntPathRequestMatcher.antMatcher("/h2-console/**")).permitAll()
                                                 .requestMatchers(HttpMethod.POST, endpoint + "/register").permitAll()
-                                                .requestMatchers(HttpMethod.GET, endpoint + "/login").hasAnyRole("USER", "ADMIN")
+                                                // .requestMatchers(HttpMethod.GET, endpoint + "/login").hasAnyRole("USER", "ADMIN")
                                                 .requestMatchers(HttpMethod.GET, endpoint + "/login").permitAll()
-                                                .requestMatchers(HttpMethod.GET, endpoint + "/escapeRooms/all").permitAll()
-                                                .requestMatchers(HttpMethod.GET, endpoint + "/**").permitAll()
-                                                .requestMatchers(HttpMethod.DELETE, endpoint + "/escapeRooms/**").permitAll()
+                                                .requestMatchers(HttpMethod.GET, endpoint + "/escapeRooms/all").hasAnyRole("USER", "ADMIN")
+                                                .requestMatchers(HttpMethod.GET, endpoint + "/**").hasAnyRole("USER", "ADMIN")
+                                                .requestMatchers(HttpMethod.POST, endpoint + "/escapeRooms/create").hasRole("ADMIN")
+                                                .requestMatchers(HttpMethod.PUT, endpoint + "/escapeRooms/**").hasRole("ADMIN")
+                                                .requestMatchers(HttpMethod.DELETE, endpoint + "/escapeRooms/**").hasRole("ADMIN")
+
 
                                                 .anyRequest().authenticated())
                                 .userDetailsService(jpaUserDetailsService)

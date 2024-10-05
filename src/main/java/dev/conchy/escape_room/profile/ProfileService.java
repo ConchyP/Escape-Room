@@ -1,8 +1,8 @@
 package dev.conchy.escape_room.profile;
 
-import java.util.Optional;
-
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class ProfileService {
@@ -13,18 +13,15 @@ public class ProfileService {
         this.profileRepository = profileRepository;
     }
 
+   
     public Profile save(Profile profile) {
         return profileRepository.save(profile);
     }
 
-    public String getEmailByUserId(Long userId) {
+   
+    public Profile getByUserId(Long userId) {
         Optional<Profile> profileOptional = profileRepository.findById(userId);
-        if (profileOptional.isPresent()) {
-            return profileOptional.get().getEmail();
-        }
-
-        return null;
+       
+        return profileOptional.orElse(null); 
     }
-        
-
 }

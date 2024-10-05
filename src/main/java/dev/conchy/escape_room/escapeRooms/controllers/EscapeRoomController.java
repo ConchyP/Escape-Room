@@ -58,10 +58,11 @@ public class EscapeRoomController {
         return ResponseEntity.noContent().build(); 
     }
 
-
-        @GetMapping(path = "/search")
-        public List<EscapeRoom> searchByDificultad(@RequestParam String dificultad) {
-            return escapeRoomService.findByDificultad(dificultad);
-        }
+    @GetMapping("/filter")
+    public ResponseEntity<List<EscapeRoom>> filterByDificultad(@RequestParam(value = "dificultad", required = false) String dificultad) {
+        List<EscapeRoom> escapeRooms = escapeRoomService.findByDificultad(dificultad);
+        return new ResponseEntity<>(escapeRooms, HttpStatus.OK);
     }
+   
+}
 
