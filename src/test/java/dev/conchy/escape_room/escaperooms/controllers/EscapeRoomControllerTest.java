@@ -105,5 +105,4 @@ public class EscapeRoomControllerTest {
         verify(escapeRoomService, times(1)).findByDificultad("Bajo");
     }
 
-    // Añadir más pruebas según sea necesario
 }

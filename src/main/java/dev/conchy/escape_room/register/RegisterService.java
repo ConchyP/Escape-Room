@@ -12,12 +12,11 @@ import dev.conchy.escape_room.users.User;
 import dev.conchy.escape_room.users.UserDto;
 import dev.conchy.escape_room.users.UserRepository;
 
-
 @Service
 public class RegisterService {
-    UserRepository repository;
-    RoleService roleService;
-    IEncryptFacade encoderFacade;
+    private final UserRepository repository;
+    private final RoleService roleService;
+    private final IEncryptFacade encoderFacade;
 
     public RegisterService(UserRepository repository, RoleService roleService, IEncryptFacade encoderFacade) {
         this.repository = repository;
@@ -37,8 +36,12 @@ public class RegisterService {
 
     public Set<Role> assignDefaultRole() {
         Role defaultRole = roleService.getById(1L);
+        if (defaultRole == null) {
+            throw new NullPointerException("Role not found");
+        }
         Set<Role> roles = new HashSet<>();
         roles.add(defaultRole);
         return roles;
     }
 }
+
