@@ -13,7 +13,7 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import dev.conchy.escape_room.escaperooms.exceptions.EscapeRoomsNotFoundException;
+
 import dev.conchy.escape_room.escaperooms.models.EscapeRoom;
 import dev.conchy.escape_room.escaperooms.services.EscapeRoomService;
 
