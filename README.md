@@ -32,6 +32,8 @@ Backend: https://github.com/ConchyP/Escape-Room
 
 Userflow
 
+https://lucid.app/lucidchart/f7979095-1205-408e-ad70-aebf2aab8645/edit?viewport_loc=-372%2C-130%2C3131%2C1513%2C0_0&invitationId=inv_ee2b6eab-c7b3-41c6-b01b-60320539c7b4
+
 ## Features
 
 ### For users:
